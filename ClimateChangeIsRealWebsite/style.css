@@ -1,0 +1,209 @@
+/* style.css */
+
+/* Set the default font-family for the entire body */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F8F8; /* Light background */
+    color: #333; /* Dark text for contrast */
+    line-height: 1.6;
+}
+
+/* Custom animations for the hero section text */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInFromBottom 1s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-up.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animate-fade-in-up.delay-400 {
+    animation-delay: 0.4s;
+}
+
+/* Enhanced Button Styles for a softer, more inviting feel */
+.btn-primary {
+    background: linear-gradient(to right, #10B981, #34D399); /* Green gradient */
+    color: white;
+    font-weight: 600;
+    padding: 0.85rem 2.25rem;
+    border-radius: 9999px; /* Full rounded */
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.025em;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #059669, #10B981);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.5);
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* Secondary Button Style for Hero Section */
+.btn-secondary {
+    background: #E0F2F1; /* Light green background */
+    color: #10B981; /* Green text */
+    font-weight: 600;
+    padding: 0.85rem 2.25rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #A7F3D0; /* Lighter green border */
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.025em;
+}
+
+.btn-secondary:hover {
+    background: #CCFBF1; /* Even lighter green on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px) scale(1.03);
+    color: #059669; /* Darker green text on hover */
+}
+
+
+/* Header Action Button */
+.btn-header-action {
+    background: #10B981; /* Solid green */
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem; /* Smaller padding for header */
+    border-radius: 9999px;
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.2);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.btn-header-action:hover {
+    background: #059669; /* Darker green on hover */
+    box-shadow: 0 5px 15px rgba(5, 150, 105, 0.3);
+    transform: translateY(-1px);
+}
+
+
+/* Card Enhancements for light theme */
+.card-light {
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #E0E0E0; /* Light gray border */
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Lighter, softer shadow */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    padding: 2.5rem;
+}
+
+.card-light:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+    border-color: #34D399; /* Green border on hover */
+}
+
+/* Section Backgrounds for light theme */
+section {
+    background-color: #F8F8F8; /* Default section background */
+    border-bottom: 1px solid #E0E0E0; /* Subtle separator */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section:nth-of-type(even) {
+    background-color: #FFFFFF; /* White for alternating sections */
+}
+
+/* Hero section specific styling */
+#home {
+    background-image: none; /* Remove background image from section */
+    background-color: #F8F8F8; /* Ensure light background */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    display: flex;
+    align-items: center;
+    padding-top: 5rem; /* Account for fixed header */
+}
+
+#home .absolute.inset-0 {
+    display: none; /* Hide the overlay as image is now in content */
+}
+
+/* Header Enhancements for light theme */
+header {
+    background-color: #FFFFFF; /* Solid white background */
+    border-bottom: 1px solid #D1FAE5; /* Light green line at the bottom */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+}
+
+header nav a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Input Field Enhancements for light theme */
+input[type="text"],
+input[type="email"] {
+    background-color: #F0F0F0; /* Light gray input background */
+    border: 1px solid #D0D0D0; /* Slightly darker border */
+    color: #333; /* Dark text color */
+    padding: 1rem 1.25rem;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: #888; /* Softer placeholder text */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #34D399; /* Green border on focus */
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2); /* Lighter green glow on focus */
+    background-color: #E8F5E9; /* Subtle light green background on focus */
+    outline: none;
+}
+
+/* Scroll-to-top button style */
+#scroll-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(to bottom right, #10B981, #34D399);
+    color: white;
+    padding: 14px 17px;
+    border-radius: 50%;
+    display: none;
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+}
+
+#scroll-to-top:hover {
+    background: linear-gradient(to bottom right, #059669, #10B981);
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.6);
+}
+
+/* Removed Message box styling for a more comforting pop-up */
+/* All .message-box-overlay, .message-box-content, .spinner, @keyframes spin, @keyframes blink-caret rules removed */
